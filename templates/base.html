@@ -8,13 +8,13 @@
 </head>
 <body>
 <div class="container mt-5">
-    <!-- {% with messages = get_flashed_messages(with_categories=true) %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
         {% for category, msg in messages %}
           <div class="alert alert-{{ 'danger' if category == 'error' else 'success' }}">{{ msg }}</div>
         {% endfor %}
       {% endif %}
-    {% endwith %} -->
+    {% endwith %}
 
     {% block content %}{% endblock %}
 </div>
