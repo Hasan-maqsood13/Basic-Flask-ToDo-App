@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Your Tasks</h2>
+
+<!-- Add Task Button -->
+<button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#taskModal">+ Add Task</button>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+  </tbody>
+</table>
+
+
+<a href="#" class="btn btn-danger">Logout</a>
+
+<!-- Modal -->
+<div class="modal fade" id="taskModal" tabindex="-1">
+  <div class="modal-dialog">
+    <form method="POST" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Task</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <input name="title" class="form-control mb-2" placeholder="Task Title" required>
+        <textarea name="description" class="form-control" placeholder="Description"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success" type="submit">Add</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
